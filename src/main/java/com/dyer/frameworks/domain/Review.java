@@ -12,17 +12,20 @@ public class Review extends BaseEntity {
     @ManyToOne
     private Course course;
 
-    private int rating;
+    @ManyToOne
+    private User user;
 
+    private int rating;
     private String description;
 
     protected Review() {
         super();
     }
 
-    public Review(Course course, int rating, String description) {
+    public Review(Course course, User user, int rating, String description) {
         this();
         this.course = course;
+        this.user = user;
         this.rating = rating;
         this.description = description;
     }
@@ -33,6 +36,14 @@ public class Review extends BaseEntity {
 
     public void setCourse(Course course) {
         this.course = course;
+    }
+
+    public User getUser() {
+        return user;
+    }
+
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public int getRating() {
@@ -50,4 +61,5 @@ public class Review extends BaseEntity {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

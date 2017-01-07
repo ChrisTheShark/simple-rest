@@ -21,4 +21,5 @@ public class RestConfiguration extends RepositoryRestConfigurerAdapter {
         validatingListener.addValidator("beforeSave", validator);
         super.configureValidatingRepositoryEventListener(validatingListener);
     }
+
 }
