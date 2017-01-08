@@ -1,12 +1,11 @@
 package com.dyer.frameworks.service;
 
+import com.dyer.frameworks.domain.User;
 import com.dyer.frameworks.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.authority.AuthorityUtils;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
-
-import com.dyer.frameworks.domain.User;
 import org.springframework.stereotype.Service;
 
 /**
